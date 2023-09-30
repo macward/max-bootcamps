@@ -18,7 +18,7 @@ struct ColorObjects {
             ColorObject(color: .blue2),
             ColorObject(color: .blue3),
             ColorObject(color: .blue4),
-            ColorObject(color: .blue1),
+            ColorObject(color: .blue5),
             ColorObject(color: .green1),
             ColorObject(color: .green2),
             ColorObject(color: .green3),
