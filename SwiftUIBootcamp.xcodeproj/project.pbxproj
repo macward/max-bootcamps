@@ -20,7 +20,9 @@
 		503DA47C2AC75D13007555F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA47B2AC75D13007555F8 /* Colors.swift */; };
 		503DA47E2AC75E47007555F8 /* ScrollTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA47D2AC75E47007555F8 /* ScrollTestView.swift */; };
 		503DA4822AC7C548007555F8 /* SocialMediaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */; };
-		503DA4842AC7CD0B007555F8 /* CardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA4832AC7CD0B007555F8 /* CardScrollView.swift */; };
+		503DA4842AC7CD0B007555F8 /* ParametricCardSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA4832AC7CD0B007555F8 /* ParametricCardSliderView.swift */; };
+		503DA4882AC8CA9E007555F8 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA4872AC8CA9E007555F8 /* MenuView.swift */; };
+		503DA48C2AC8CAF0007555F8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA48B2AC8CAF0007555F8 /* Models.swift */; };
 		50A326532AC3E0D300854FD5 /* SimplePanGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A326522AC3E0D300854FD5 /* SimplePanGestureView.swift */; };
 		50F356172AC68A63006AC58F /* RelativeFrameModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */; };
 		50F356192AC69105006AC58F /* HideTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F356182AC69105006AC58F /* HideTabBar.swift */; };
@@ -42,7 +44,9 @@
 		503DA47B2AC75D13007555F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		503DA47D2AC75E47007555F8 /* ScrollTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTestView.swift; sourceTree = "<group>"; };
 		503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaCardView.swift; sourceTree = "<group>"; };
-		503DA4832AC7CD0B007555F8 /* CardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScrollView.swift; sourceTree = "<group>"; };
+		503DA4832AC7CD0B007555F8 /* ParametricCardSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametricCardSliderView.swift; sourceTree = "<group>"; };
+		503DA4872AC8CA9E007555F8 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		503DA48B2AC8CAF0007555F8 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		50A326522AC3E0D300854FD5 /* SimplePanGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePanGestureView.swift; sourceTree = "<group>"; };
 		50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeFrameModifierView.swift; sourceTree = "<group>"; };
 		50F356182AC69105006AC58F /* HideTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideTabBar.swift; sourceTree = "<group>"; };
@@ -80,7 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				5007D0732AC397D500241560 /* Main.swift */,
+				503DA4872AC8CA9E007555F8 /* MenuView.swift */,
 				5007D0832AC397EE00241560 /* Navigation */,
+				503DA4862AC8CA3E007555F8 /* ScrollViews */,
+				503DA4852AC8CA1E007555F8 /* Sliders */,
 				5007D0842AC3980F00241560 /* Layouts */,
 				5007D0822AC397E100241560 /* Animations */,
 				5007D0812AC397DC00241560 /* Gestures */,
@@ -120,10 +127,7 @@
 		5007D0832AC397EE00241560 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				5007D0962AC399D000241560 /* HideOnScrollTabView.swift */,
-				50F356182AC69105006AC58F /* HideTabBar.swift */,
-				503DA47D2AC75E47007555F8 /* ScrollTestView.swift */,
-				503DA4832AC7CD0B007555F8 /* CardScrollView.swift */,
+				503DA4892AC8CAB0007555F8 /* Tabbars */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -168,9 +172,43 @@
 		503DA47A2AC75CFD007555F8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				503DA48A2AC8CAD5007555F8 /* Models */,
 				503DA47B2AC75D13007555F8 /* Colors.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		503DA4852AC8CA1E007555F8 /* Sliders */ = {
+			isa = PBXGroup;
+			children = (
+				503DA47D2AC75E47007555F8 /* ScrollTestView.swift */,
+				503DA4832AC7CD0B007555F8 /* ParametricCardSliderView.swift */,
+			);
+			path = Sliders;
+			sourceTree = "<group>";
+		};
+		503DA4862AC8CA3E007555F8 /* ScrollViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ScrollViews;
+			sourceTree = "<group>";
+		};
+		503DA4892AC8CAB0007555F8 /* Tabbars */ = {
+			isa = PBXGroup;
+			children = (
+				5007D0962AC399D000241560 /* HideOnScrollTabView.swift */,
+				50F356182AC69105006AC58F /* HideTabBar.swift */,
+			);
+			path = Tabbars;
+			sourceTree = "<group>";
+		};
+		503DA48A2AC8CAD5007555F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				503DA48B2AC8CAF0007555F8 /* Models.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +293,12 @@
 				50A326532AC3E0D300854FD5 /* SimplePanGestureView.swift in Sources */,
 				50F3561B2AC6948C006AC58F /* AIScreenContainerView.swift in Sources */,
 				5007D08A2AC3986800241560 /* AIScreenView.swift in Sources */,
+				503DA4882AC8CA9E007555F8 /* MenuView.swift in Sources */,
+				503DA48C2AC8CAF0007555F8 /* Models.swift in Sources */,
 				5007D0972AC399D000241560 /* HideOnScrollTabView.swift in Sources */,
 				5007D08B2AC3986800241560 /* ElipseShape.swift in Sources */,
 				5007D08F2AC3987000241560 /* CardTransitionView.swift in Sources */,
-				503DA4842AC7CD0B007555F8 /* CardScrollView.swift in Sources */,
+				503DA4842AC7CD0B007555F8 /* ParametricCardSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

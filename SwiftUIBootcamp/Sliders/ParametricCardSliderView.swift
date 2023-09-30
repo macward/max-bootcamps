@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardScrollView: View {
+struct ParametricCardSliderView: View {
     
     enum RotationAxis: String, CaseIterable, Identifiable {
         case x, y, z
@@ -154,5 +154,5 @@ struct CardScrollView: View {
 }
 
 #Preview {
-    CardScrollView()
+    ParametricCardSliderView()
 }
