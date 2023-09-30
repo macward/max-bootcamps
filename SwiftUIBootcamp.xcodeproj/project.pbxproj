@@ -15,9 +15,16 @@
 		5007D08F2AC3987000241560 /* CardTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007D08E2AC3987000241560 /* CardTransitionView.swift */; };
 		5007D0912AC3989A00241560 /* AIAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5007D0902AC3989A00241560 /* AIAssets.xcassets */; };
 		5007D0932AC398A300241560 /* DCAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5007D0922AC398A300241560 /* DCAssets.xcassets */; };
-		5007D0972AC399D000241560 /* NativeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007D0962AC399D000241560 /* NativeTabView.swift */; };
+		5007D0972AC399D000241560 /* HideOnScrollTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007D0962AC399D000241560 /* HideOnScrollTabView.swift */; };
 		5007D0992AC39B5900241560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5007D0982AC39B5900241560 /* Assets.xcassets */; };
+		503DA47C2AC75D13007555F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA47B2AC75D13007555F8 /* Colors.swift */; };
+		503DA47E2AC75E47007555F8 /* ScrollTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA47D2AC75E47007555F8 /* ScrollTestView.swift */; };
+		503DA4822AC7C548007555F8 /* SocialMediaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */; };
+		503DA4842AC7CD0B007555F8 /* CardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA4832AC7CD0B007555F8 /* CardScrollView.swift */; };
 		50A326532AC3E0D300854FD5 /* SimplePanGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A326522AC3E0D300854FD5 /* SimplePanGestureView.swift */; };
+		50F356172AC68A63006AC58F /* RelativeFrameModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */; };
+		50F356192AC69105006AC58F /* HideTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F356182AC69105006AC58F /* HideTabBar.swift */; };
+		50F3561B2AC6948C006AC58F /* AIScreenContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3561A2AC6948C006AC58F /* AIScreenContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +37,16 @@
 		5007D08E2AC3987000241560 /* CardTransitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTransitionView.swift; sourceTree = "<group>"; };
 		5007D0902AC3989A00241560 /* AIAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AIAssets.xcassets; sourceTree = "<group>"; };
 		5007D0922AC398A300241560 /* DCAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DCAssets.xcassets; sourceTree = "<group>"; };
-		5007D0962AC399D000241560 /* NativeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeTabView.swift; sourceTree = "<group>"; };
+		5007D0962AC399D000241560 /* HideOnScrollTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideOnScrollTabView.swift; sourceTree = "<group>"; };
 		5007D0982AC39B5900241560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		503DA47B2AC75D13007555F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		503DA47D2AC75E47007555F8 /* ScrollTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTestView.swift; sourceTree = "<group>"; };
+		503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaCardView.swift; sourceTree = "<group>"; };
+		503DA4832AC7CD0B007555F8 /* CardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScrollView.swift; sourceTree = "<group>"; };
 		50A326522AC3E0D300854FD5 /* SimplePanGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePanGestureView.swift; sourceTree = "<group>"; };
+		50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeFrameModifierView.swift; sourceTree = "<group>"; };
+		50F356182AC69105006AC58F /* HideTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideTabBar.swift; sourceTree = "<group>"; };
+		50F3561A2AC6948C006AC58F /* AIScreenContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIScreenContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,7 @@
 				5007D0822AC397E100241560 /* Animations */,
 				5007D0812AC397DC00241560 /* Gestures */,
 				5007D0852AC3981700241560 /* Maps */,
+				503DA47A2AC75CFD007555F8 /* Utilities */,
 				5007D0792AC397D800241560 /* Preview Content */,
 				5007D0982AC39B5900241560 /* Assets.xcassets */,
 			);
@@ -105,7 +120,10 @@
 		5007D0832AC397EE00241560 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				5007D0962AC399D000241560 /* NativeTabView.swift */,
+				5007D0962AC399D000241560 /* HideOnScrollTabView.swift */,
+				50F356182AC69105006AC58F /* HideTabBar.swift */,
+				503DA47D2AC75E47007555F8 /* ScrollTestView.swift */,
+				503DA4832AC7CD0B007555F8 /* CardScrollView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -113,6 +131,8 @@
 		5007D0842AC3980F00241560 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */,
+				503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -129,6 +149,7 @@
 			children = (
 				5007D0872AC3986800241560 /* AIScreenView.swift */,
 				5007D0882AC3986800241560 /* ElipseShape.swift */,
+				50F3561A2AC6948C006AC58F /* AIScreenContainerView.swift */,
 				5007D0892AC3986800241560 /* ButtonView.swift */,
 				5007D0902AC3989A00241560 /* AIAssets.xcassets */,
 			);
@@ -142,6 +163,14 @@
 				5007D0922AC398A300241560 /* DCAssets.xcassets */,
 			);
 			path = CardTransition;
+			sourceTree = "<group>";
+		};
+		503DA47A2AC75CFD007555F8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				503DA47B2AC75D13007555F8 /* Colors.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,12 +246,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5007D0742AC397D500241560 /* Main.swift in Sources */,
+				503DA4822AC7C548007555F8 /* SocialMediaCardView.swift in Sources */,
+				503DA47C2AC75D13007555F8 /* Colors.swift in Sources */,
+				50F356172AC68A63006AC58F /* RelativeFrameModifierView.swift in Sources */,
 				5007D08C2AC3986800241560 /* ButtonView.swift in Sources */,
+				50F356192AC69105006AC58F /* HideTabBar.swift in Sources */,
+				503DA47E2AC75E47007555F8 /* ScrollTestView.swift in Sources */,
 				50A326532AC3E0D300854FD5 /* SimplePanGestureView.swift in Sources */,
+				50F3561B2AC6948C006AC58F /* AIScreenContainerView.swift in Sources */,
 				5007D08A2AC3986800241560 /* AIScreenView.swift in Sources */,
-				5007D0972AC399D000241560 /* NativeTabView.swift in Sources */,
+				5007D0972AC399D000241560 /* HideOnScrollTabView.swift in Sources */,
 				5007D08B2AC3986800241560 /* ElipseShape.swift in Sources */,
 				5007D08F2AC3987000241560 /* CardTransitionView.swift in Sources */,
+				503DA4842AC7CD0B007555F8 /* CardScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

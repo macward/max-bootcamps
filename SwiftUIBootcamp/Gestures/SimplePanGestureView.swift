@@ -12,14 +12,7 @@ struct SimplePanGestureView: View {
     @GestureState private var isDetectingLongPress = false
     
     var body: some View {
-        Canvas { context, size in
-            context.fill(Path(CGRect(origin: .zero, size: size)), with: .color(.red))
-            
-            var squarePath = Path()
-            
-            for i in 0..<100 {
-                
-            }
+        VStack {
         }
     }
 }

@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct NativeTabView: View {
+struct HideOnScrollTabView: View {
     
     @State private var tabState: Visibility = .visible
     @State private var presentDest: Bool = false
     
     var body: some View {
         TabView {
-            
             NavigationStack {
                 TabStateScrollView(axis: .vertical, showIndicator: false, tabState: $tabState) {
                     VStack (spacing: 12) {
@@ -64,9 +63,11 @@ struct TabStateScrollView<Content: View>: View {
     @Binding var tabState: Visibility
     var content: Content
     
-    init(axis: Axis.Set, 
+    init(axis: Axis.Set,
          showIndicator: Bool,
-         tabState: Binding<Visibility>, content: @escaping () -> Content) {
+         tabState: Binding<Visibility>, 
+         content: @escaping () -> Content) {
+        
         self.axis = axis
         self.showIndicator = showIndicator
         self._tabState = tabState
@@ -102,12 +103,16 @@ struct TabStateScrollView<Content: View>: View {
         
         if velocityY < 0 {
             // swipe up
-            if -(velocityY / 5) > 60 && tabState == .visible {
+            if -(velocityY / 10) > 70 
+                    && -(offsetY) > 80
+                    && tabState == .visible {
                 tabState = .hidden
             }
         } else {
             // swipe down
-            if (velocityY / 5) > 40 && tabState == .hidden {
+            if (velocityY / 10) > 40 
+                && offsetY > 40 
+                && tabState == .hidden {
                 tabState = .visible
             }
         }
@@ -159,5 +164,5 @@ fileprivate struct CustomGesture: UIViewRepresentable {
 }
 
 #Preview {
-    NativeTabView()
+    HideOnScrollTabView()
 }
