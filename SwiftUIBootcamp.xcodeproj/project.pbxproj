@@ -24,7 +24,10 @@
 		503DA4882AC8CA9E007555F8 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA4872AC8CA9E007555F8 /* MenuView.swift */; };
 		503DA48C2AC8CAF0007555F8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA48B2AC8CAF0007555F8 /* Models.swift */; };
 		506988132ACA205300D52047 /* InfiniteAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506988122ACA205300D52047 /* InfiniteAnimation.swift */; };
+		5070C13B2ACA68C300EE8C55 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070C13A2ACA68C300EE8C55 /* BaseView.swift */; };
+		5070C13D2ACA691500EE8C55 /* OnlyiOS17View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070C13C2ACA691500EE8C55 /* OnlyiOS17View.swift */; };
 		50A326532AC3E0D300854FD5 /* SimplePanGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A326522AC3E0D300854FD5 /* SimplePanGestureView.swift */; };
+		50AA628A2ACA70CF008DC0DD /* ViewLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA62892ACA70CF008DC0DD /* ViewLimit.swift */; };
 		50F356172AC68A63006AC58F /* RelativeFrameModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */; };
 		50F356192AC69105006AC58F /* HideTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F356182AC69105006AC58F /* HideTabBar.swift */; };
 		50F3561B2AC6948C006AC58F /* AIScreenContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3561A2AC6948C006AC58F /* AIScreenContainerView.swift */; };
@@ -51,7 +54,10 @@
 		503DA4872AC8CA9E007555F8 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		503DA48B2AC8CAF0007555F8 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		506988122ACA205300D52047 /* InfiniteAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteAnimation.swift; sourceTree = "<group>"; };
+		5070C13A2ACA68C300EE8C55 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		5070C13C2ACA691500EE8C55 /* OnlyiOS17View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyiOS17View.swift; sourceTree = "<group>"; };
 		50A326522AC3E0D300854FD5 /* SimplePanGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePanGestureView.swift; sourceTree = "<group>"; };
+		50AA62892ACA70CF008DC0DD /* ViewLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLimit.swift; sourceTree = "<group>"; };
 		50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeFrameModifierView.swift; sourceTree = "<group>"; };
 		50F356182AC69105006AC58F /* HideTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideTabBar.swift; sourceTree = "<group>"; };
 		50F3561A2AC6948C006AC58F /* AIScreenContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIScreenContainerView.swift; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 				5007D0822AC397E100241560 /* Animations */,
 				5007D0812AC397DC00241560 /* Gestures */,
 				5007D0852AC3981700241560 /* Maps */,
+				5070C1382ACA68AA00EE8C55 /* Common */,
 				503DA47A2AC75CFD007555F8 /* Utilities */,
 				5007D0792AC397D800241560 /* Preview Content */,
 				5007D0982AC39B5900241560 /* Assets.xcassets */,
@@ -143,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */,
-				503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -218,6 +224,25 @@
 				503DA48B2AC8CAF0007555F8 /* Models.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5070C1382ACA68AA00EE8C55 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5070C1392ACA68AF00EE8C55 /* Views */,
+				50AA62892ACA70CF008DC0DD /* ViewLimit.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5070C1392ACA68AF00EE8C55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */,
+				5070C13A2ACA68C300EE8C55 /* BaseView.swift */,
+				5070C13C2ACA691500EE8C55 /* OnlyiOS17View.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +324,8 @@
 				5007D08C2AC3986800241560 /* ButtonView.swift in Sources */,
 				50F356192AC69105006AC58F /* HideTabBar.swift in Sources */,
 				503DA47E2AC75E47007555F8 /* ScrollTestView.swift in Sources */,
+				5070C13B2ACA68C300EE8C55 /* BaseView.swift in Sources */,
+				50AA628A2ACA70CF008DC0DD /* ViewLimit.swift in Sources */,
 				50A326532AC3E0D300854FD5 /* SimplePanGestureView.swift in Sources */,
 				50F4EC212AC8DADD00A10280 /* VerticalScrollWithAnimation.swift in Sources */,
 				50F3561B2AC6948C006AC58F /* AIScreenContainerView.swift in Sources */,
@@ -311,6 +338,7 @@
 				5007D08F2AC3987000241560 /* CardTransitionView.swift in Sources */,
 				50F4EC232AC9383500A10280 /* CustomPagingSliderScreen.swift in Sources */,
 				503DA4842AC7CD0B007555F8 /* ParametricCardSliderView.swift in Sources */,
+				5070C13D2ACA691500EE8C55 /* OnlyiOS17View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

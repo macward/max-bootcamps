@@ -102,21 +102,6 @@ struct InfiniteAnimation: View {
     }
 }
 
-
-struct BaseView<Content: View>: View {
-    
-    @ViewBuilder var content: Content
-    
-    var body: some View {
-        ZStack {
-            Color.background.ignoresSafeArea()
-            content
-        }
-        
-    }
-}
-
-
 #Preview {
     InfiniteAnimation()
 }
