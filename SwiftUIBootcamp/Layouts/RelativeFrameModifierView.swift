@@ -70,23 +70,3 @@ struct RelativeFrameScroll: View {
 #Preview {
     RelativeFrameScroll()
 }
-
-
-/*
- if #available(iOS 17, *) {
- ScrollView(.horizontal) {
- VStack {
- Rectangle().fill(Color.blue)
- .containerRelativeFrame([.vertical])
- 
- Rectangle().fill(Color.red)
- .containerRelativeFrame([.vertical])
- }
- .scrollTargetLayout()
- }
- .scrollTargetBehavior(.paging)
- .ignoresSafeArea(edges: .all)
- } else {
- 
- }
- */

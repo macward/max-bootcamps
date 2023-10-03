@@ -24,24 +24,87 @@ struct CustomPagingSliderScreen: View {
     ]
     
     var body: some View {
-        if #available(iOS 17, *) {
-            PagingSliderView(data: $items) { $item in
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(item.color.gradient)
-                    .frame(width: nil, height: 120)
-            } titleContent: { $item in
-                VStack {
-                    Text(item.title)
-                        .font(.largeTitle.bold())
-                    
-                    Text(item.subtitle)
-                        .foregroundStyle(.gray)
-                        .multilineTextAlignment(.center)
-                        .frame(height: 40)
+        
+        NavigationStack {
+            ScrollView {
+                
+                // Header
+                
+                if #available(iOS 17, *) {
+                    PagingSliderView(data: $items) { $item in
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(item.color.gradient)
+                            .frame(width: nil, height: 220)
+                            
+                    } titleContent: { $item in
+                        VStack {
+                            Text(item.title)
+                                .font(.largeTitle.bold())
+                            
+                            Text(item.subtitle)
+                                .foregroundStyle(.gray)
+                                .multilineTextAlignment(.center)
+                                .frame(height: 40)
+                        }
+                        .padding()
+                    }
+                    .safeAreaPadding([.horizontal, .top], 35)
+                } else {
+                    OnlyiOS17View()
                 }
-                .padding()
+                
+                if #available(iOS 17, *) {
+                    VStack {
+                        HStack {
+                            Text("Vertical list")
+                                .font(.title3)
+                                .multilineTextAlignment(.leading)
+                                .padding(.leading, 20)
+                            Spacer()
+                        }
+                        ScrollView (.vertical) {
+                            VStack {
+                                ForEach (0...2, id: \.self) { _ in
+                                    SocialMediaCardView()
+                                        
+                                }
+                            }
+                            .scrollTargetLayout()
+                            .safeAreaPadding(.horizontal, 20)
+                        }
+                        .contentMargins(16, for: .scrollContent)
+                        .scrollTargetBehavior(.viewAligned)
+                    }
+                    .padding(.top)
+                }
+                
+                if #available(iOS 17, *) {
+                    VStack {
+                        HStack {
+                            Text("Horizontal list")
+                                .font(.title3)
+                                .multilineTextAlignment(.leading)
+                                .padding(.leading, 20)
+                            Spacer()
+                        }
+                        ScrollView (.horizontal) {
+                            HStack {
+                                ForEach (0...2, id: \.self) { _ in
+                                    SocialMediaCardView()
+                                        .safeAreaPadding(.horizontal, 20)
+                                        .containerRelativeFrame(.horizontal,
+                                                                count: 1,
+                                                                spacing: 16)
+                                }
+                            }
+                            .scrollTargetLayout()
+                            
+                        }
+                        .contentMargins(16, for: .scrollContent)
+                        .scrollTargetBehavior(.viewAligned)
+                    }
+                }
             }
-            .safeAreaPadding([.horizontal, .top], 35)
         }
     }
 }

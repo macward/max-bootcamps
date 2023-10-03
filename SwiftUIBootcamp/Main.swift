@@ -11,9 +11,7 @@ import SwiftUI
 struct SwiftUIBootcampApp: App {
     var body: some Scene {
         WindowGroup {
-            //InfiniteAnimation()
-            AIScreenView()
-            //MenuView()
+            MenuView()
         }
     }
 }

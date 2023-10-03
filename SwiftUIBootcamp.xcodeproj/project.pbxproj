@@ -103,6 +103,7 @@
 				5007D0842AC3980F00241560 /* Layouts */,
 				5007D0822AC397E100241560 /* Animations */,
 				5007D0812AC397DC00241560 /* Gestures */,
+				50AA628B2ACA78BD008DC0DD /* CustomControls */,
 				5007D0852AC3981700241560 /* Maps */,
 				5070C1382ACA68AA00EE8C55 /* Common */,
 				503DA47A2AC75CFD007555F8 /* Utilities */,
@@ -243,6 +244,13 @@
 				5070C13C2ACA691500EE8C55 /* OnlyiOS17View.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		50AA628B2ACA78BD008DC0DD /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomControls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
