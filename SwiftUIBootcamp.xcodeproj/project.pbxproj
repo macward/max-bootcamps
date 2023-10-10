@@ -17,6 +17,7 @@
 		5007D0932AC398A300241560 /* DCAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5007D0922AC398A300241560 /* DCAssets.xcassets */; };
 		5007D0972AC399D000241560 /* HideOnScrollTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007D0962AC399D000241560 /* HideOnScrollTabView.swift */; };
 		5007D0992AC39B5900241560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5007D0982AC39B5900241560 /* Assets.xcassets */; };
+		501FD6882ACE91C100657B0A /* MatchedGeometrySimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501FD6872ACE91C100657B0A /* MatchedGeometrySimpleView.swift */; };
 		503DA47C2AC75D13007555F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA47B2AC75D13007555F8 /* Colors.swift */; };
 		503DA47E2AC75E47007555F8 /* ScrollTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA47D2AC75E47007555F8 /* ScrollTestView.swift */; };
 		503DA4822AC7C548007555F8 /* SocialMediaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */; };
@@ -26,6 +27,9 @@
 		506988132ACA205300D52047 /* InfiniteAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506988122ACA205300D52047 /* InfiniteAnimation.swift */; };
 		5070C13B2ACA68C300EE8C55 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070C13A2ACA68C300EE8C55 /* BaseView.swift */; };
 		5070C13D2ACA691500EE8C55 /* OnlyiOS17View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070C13C2ACA691500EE8C55 /* OnlyiOS17View.swift */; };
+		5092D4302AD0A9FC00D50E8E /* PropertyWrapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092D42F2AD0A9FC00D50E8E /* PropertyWrapperTest.swift */; };
+		5092D4352AD2180700D50E8E /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092D4342AD2180700D50E8E /* PreferenceKey.swift */; };
+		5092D4372AD35BF300D50E8E /* EnvironmentTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092D4362AD35BF300D50E8E /* EnvironmentTestView.swift */; };
 		50A326532AC3E0D300854FD5 /* SimplePanGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A326522AC3E0D300854FD5 /* SimplePanGestureView.swift */; };
 		50AA628A2ACA70CF008DC0DD /* ViewLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA62892ACA70CF008DC0DD /* ViewLimit.swift */; };
 		50F356172AC68A63006AC58F /* RelativeFrameModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */; };
@@ -47,6 +51,7 @@
 		5007D0922AC398A300241560 /* DCAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DCAssets.xcassets; sourceTree = "<group>"; };
 		5007D0962AC399D000241560 /* HideOnScrollTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideOnScrollTabView.swift; sourceTree = "<group>"; };
 		5007D0982AC39B5900241560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		501FD6872ACE91C100657B0A /* MatchedGeometrySimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometrySimpleView.swift; sourceTree = "<group>"; };
 		503DA47B2AC75D13007555F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		503DA47D2AC75E47007555F8 /* ScrollTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTestView.swift; sourceTree = "<group>"; };
 		503DA4812AC7C548007555F8 /* SocialMediaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaCardView.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 		506988122ACA205300D52047 /* InfiniteAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteAnimation.swift; sourceTree = "<group>"; };
 		5070C13A2ACA68C300EE8C55 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		5070C13C2ACA691500EE8C55 /* OnlyiOS17View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyiOS17View.swift; sourceTree = "<group>"; };
+		5092D42F2AD0A9FC00D50E8E /* PropertyWrapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperTest.swift; sourceTree = "<group>"; };
+		5092D4342AD2180700D50E8E /* PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
+		5092D4362AD35BF300D50E8E /* EnvironmentTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentTestView.swift; sourceTree = "<group>"; };
 		50A326522AC3E0D300854FD5 /* SimplePanGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePanGestureView.swift; sourceTree = "<group>"; };
 		50AA62892ACA70CF008DC0DD /* ViewLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLimit.swift; sourceTree = "<group>"; };
 		50F356162AC68A63006AC58F /* RelativeFrameModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeFrameModifierView.swift; sourceTree = "<group>"; };
@@ -95,6 +103,7 @@
 		5007D0722AC397D500241560 /* SwiftUIBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				5092D42E2AD0A9ED00D50E8E /* Advanced */,
 				5007D0732AC397D500241560 /* Main.swift */,
 				503DA4872AC8CA9E007555F8 /* MenuView.swift */,
 				5007D0832AC397EE00241560 /* Navigation */,
@@ -132,6 +141,7 @@
 		5007D0822AC397E100241560 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				501FD6862ACE91A900657B0A /* MatchedGeometry */,
 				5007D0862AC3986800241560 /* AIScreenViews */,
 				5007D08D2AC3987000241560 /* CardTransition */,
 				506988122ACA205300D52047 /* InfiniteAnimation.swift */,
@@ -181,6 +191,14 @@
 				5007D0922AC398A300241560 /* DCAssets.xcassets */,
 			);
 			path = CardTransition;
+			sourceTree = "<group>";
+		};
+		501FD6862ACE91A900657B0A /* MatchedGeometry */ = {
+			isa = PBXGroup;
+			children = (
+				501FD6872ACE91C100657B0A /* MatchedGeometrySimpleView.swift */,
+			);
+			path = MatchedGeometry;
 			sourceTree = "<group>";
 		};
 		503DA47A2AC75CFD007555F8 /* Utilities */ = {
@@ -244,6 +262,16 @@
 				5070C13C2ACA691500EE8C55 /* OnlyiOS17View.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5092D42E2AD0A9ED00D50E8E /* Advanced */ = {
+			isa = PBXGroup;
+			children = (
+				5092D42F2AD0A9FC00D50E8E /* PropertyWrapperTest.swift */,
+				5092D4342AD2180700D50E8E /* PreferenceKey.swift */,
+				5092D4362AD35BF300D50E8E /* EnvironmentTestView.swift */,
+			);
+			path = Advanced;
 			sourceTree = "<group>";
 		};
 		50AA628B2ACA78BD008DC0DD /* CustomControls */ = {
@@ -329,10 +357,13 @@
 				503DA4822AC7C548007555F8 /* SocialMediaCardView.swift in Sources */,
 				503DA47C2AC75D13007555F8 /* Colors.swift in Sources */,
 				50F356172AC68A63006AC58F /* RelativeFrameModifierView.swift in Sources */,
+				501FD6882ACE91C100657B0A /* MatchedGeometrySimpleView.swift in Sources */,
 				5007D08C2AC3986800241560 /* ButtonView.swift in Sources */,
 				50F356192AC69105006AC58F /* HideTabBar.swift in Sources */,
 				503DA47E2AC75E47007555F8 /* ScrollTestView.swift in Sources */,
 				5070C13B2ACA68C300EE8C55 /* BaseView.swift in Sources */,
+				5092D4352AD2180700D50E8E /* PreferenceKey.swift in Sources */,
+				5092D4372AD35BF300D50E8E /* EnvironmentTestView.swift in Sources */,
 				50AA628A2ACA70CF008DC0DD /* ViewLimit.swift in Sources */,
 				50A326532AC3E0D300854FD5 /* SimplePanGestureView.swift in Sources */,
 				50F4EC212AC8DADD00A10280 /* VerticalScrollWithAnimation.swift in Sources */,
@@ -342,6 +373,7 @@
 				506988132ACA205300D52047 /* InfiniteAnimation.swift in Sources */,
 				503DA48C2AC8CAF0007555F8 /* Models.swift in Sources */,
 				5007D0972AC399D000241560 /* HideOnScrollTabView.swift in Sources */,
+				5092D4302AD0A9FC00D50E8E /* PropertyWrapperTest.swift in Sources */,
 				5007D08B2AC3986800241560 /* ElipseShape.swift in Sources */,
 				5007D08F2AC3987000241560 /* CardTransitionView.swift in Sources */,
 				50F4EC232AC9383500A10280 /* CustomPagingSliderScreen.swift in Sources */,

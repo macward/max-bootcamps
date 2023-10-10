@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+struct BaseViewBackground<Background: View, Content: View>: View {
+    
+    @ViewBuilder var background: Background
+    @ViewBuilder var content: Content
+    
+    var body: some View {
+        ZStack(content: {
+            background.ignoresSafeArea()
+            content
+        })
+    }
+}
+
 struct BaseView<Content: View>: View {
     
     @ViewBuilder var content: Content
