@@ -13,14 +13,15 @@ struct EnvironmentTestView: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var MainView: some View {
-        if colorScheme == .dark { // Checks the wrapped value.
-            Text("Dark scheme")
-        } else {
-            Text("Light scheme")
-                .onTapGesture {
-                    dismiss()
-                }
-        }
+//        if colorScheme == .dark { // Checks the wrapped value.
+//            Text("Dark scheme")
+//        } else {
+//            Text("Light scheme")
+//                .onTapGesture {
+//                    dismiss()
+//                }
+//        }
+        Text("sample")
             
     }
     

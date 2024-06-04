@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SwiftUIBootcampApp: App {
+    @State private var debugLayout: Bool = true
     var body: some Scene {
         WindowGroup {
-            PreferenceKeySampleView()
+            CategoryListView()
+                .debugLayout(debugLayout)
         }
     }
 }

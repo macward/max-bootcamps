@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+struct ImageObject: Identifiable {
+    private (set) var id: UUID = .init()
+    var image: String
+}
+
 struct ColorObject: Hashable {
     var color: Color
 }

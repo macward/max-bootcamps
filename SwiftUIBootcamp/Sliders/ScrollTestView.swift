@@ -11,7 +11,6 @@ struct ScrollTestView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     private var colors: [ColorObject] = ColorObjects.list()
     var body: some View {
-        
         BaseView {
             if #available(iOS 17, *) {
                 ScrollView (.horizontal, showsIndicators: false) {

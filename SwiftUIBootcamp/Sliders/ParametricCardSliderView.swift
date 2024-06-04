@@ -147,7 +147,6 @@ struct ParametricCardSliderView: View {
                 } else {
                     EmptyView()
                 }
-                
             }
         }
     }
