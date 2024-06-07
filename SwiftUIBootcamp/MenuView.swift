@@ -9,29 +9,47 @@ import SwiftUI
 
 // Enum para las categorías
 enum Category: String, Identifiable, CaseIterable {
-    case animations
     case layouts
+    case navigation
+    case animations
     case scrollview
+    case sliders
+    case lists
+    case GeometryReader
+    case soundAndFeedback
+    case Gestures
+    case Components
+    case UIs
     case others
-    case buttons
-    case screens
     
     var id: String { self.rawValue }
     
     var displayName: String {
         switch self {
         case .animations:
-            return "Animaciones"
+            return "Animations Bootcamp"
         case .layouts:
-            return "Layouts"
+            return "Layouts bootcamp"
         case .others:
             return "Otros"
         case .scrollview:
-            return "Scrolls"
-        case .buttons:
-            return "Buttons"
-        case .screens:
-            return "Screens"
+            return "ScrollViews Bootcamp"
+        case .sliders:
+            return "Sliders Bootcamp"
+        case .Components:
+            return "Components"
+        case .UIs:
+            return "UIs"
+        case .lists:
+            return "Lists Bootcamp"
+        case .GeometryReader:
+            return "Gemetry Reader Bootcamp"
+        case .soundAndFeedback:
+            return "Sound and Feedback"
+        case .navigation:
+            return "Navigation Bootcamp"
+        case .Gestures:
+            return "Gestures Bootcamp"
         }
     }
     
@@ -39,27 +57,49 @@ enum Category: String, Identifiable, CaseIterable {
     var views: [ViewDestination] {
         switch self {
         case .animations:
-            return [.AIScreen, .AIScreenV2]
+            return [.AIScreen, 
+                .AIScreenV2,
+                .HideTabOnScroll]
         case .layouts:
-            return [.HideTabOnScroll, .HideTabOnChildView]
+            return [.RelativeFrame,
+                .RelativeSizeLayout,
+                .ContainerRelativeFrame,]
         case .scrollview:
-            return [.VerticalScrollAnimation, .ScrollTest, .ParametricSlider, .PageSliderControl]
-        case .buttons:
-            return [.ButtonView, .Heptic]
+            return [.VerticalScrollAnimation,
+                .HideTabOnScroll,
+                .HideTabOnChildView,
+                .HideSearchView,
+                .hideSearchbar,
+                .ScrollTransition1,
+                .RelativeScroll]
+        case .Components:
+            return [.ButtonView]
         case .others:
-            return [.CardTransition]
-        case .screens:
-            return [.CardCarousel]
+            return [.CardTransition, .Heptic]
+        case .UIs:
+            return [.CardCarousel, 
+                .CardTransition,
+                .AIScreen]
+        case .lists: return []
+        case .sliders:
+            return [.ScrollTest,
+                .ParametricSlider,
+                .PageSliderControl]
+        case .GeometryReader: return []
+        case .soundAndFeedback:
+            return [.Heptic]
+        case .navigation: return []
+        case .Gestures: return []
         }
     }
 }
 
 // Enum para las vistas dentro de cada categoría
 enum ViewDestination: String, Identifiable, CaseIterable {
-    case AIScreen
-    case AIScreenV2
-    case HideTabOnScroll
-    case HideTabOnChildView
+    case AIScreen // pantalla que muestra una animacion
+    case AIScreenV2 // variacion de la pantalla
+    case HideTabOnScroll // hides tabbar when user scrolls down
+    case HideTabOnChildView // hides tabbar in child views
     case VerticalScrollAnimation
     case ScrollTest
     case ParametricSlider
@@ -67,7 +107,14 @@ enum ViewDestination: String, Identifiable, CaseIterable {
     case PageSliderControl
     case ButtonView
     case CardCarousel
+    case HideSearchView
     case Heptic
+    case RelativeFrame
+    case ContainerRelativeFrame
+    case RelativeSizeLayout
+    case hideSearchbar
+    case ScrollTransition1
+    case RelativeScroll
     
     var id: String { self.rawValue }
     
@@ -97,7 +144,22 @@ enum ViewDestination: String, Identifiable, CaseIterable {
         case .CardCarousel:
             CircularCarouselScreen()
         case .Heptic:
-            SimpleHepticBootcamp()
+            HepticBootcamp()
+        case .HideSearchView:
+            HideSearchBarOnScroll()
+            // Layout
+        case .RelativeFrame:
+            RelativeFrameLayout()
+        case .ContainerRelativeFrame:
+            SimpleContainerRelativeFrame()
+        case .RelativeSizeLayout:
+            RelativeFrameScroll()
+        case .hideSearchbar:
+            HideSearchBarOnScroll()
+        case .ScrollTransition1:
+            ScrollTransitionExample1()
+        case .RelativeScroll:
+            RelativeFrameScroll()
         }
     }
     
@@ -127,6 +189,20 @@ enum ViewDestination: String, Identifiable, CaseIterable {
             return "Card carousel"
         case .Heptic:
             return "Heptic bootcamp"
+        case .HideSearchView:
+            return "Hide search view on scroll"
+        case .RelativeFrame:
+            return "Relative frame layout"
+        case .ContainerRelativeFrame:
+            return "Container relative frame"
+        case .RelativeSizeLayout:
+            return "Relative size layout"
+        case .hideSearchbar:
+            return "Hide Searchbar"
+        case .ScrollTransition1:
+            return "Scroll transition example 1"
+        case .RelativeScroll:
+            return "Relative scroll views"
         }
     }
     

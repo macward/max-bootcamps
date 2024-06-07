@@ -31,23 +31,24 @@ struct GeometryReaderBootcamp: View {
     }
 }
 
-struct NoGeometryReaderBootcamp: View {
+struct GeometryReaderEffect: View {
     var body: some View {
-        VStack {
-            HStack {
-                Text("Text line 1")
-            }
-            
-            HStack {
-                Text("Text line 2")
-                Text("Text line 3")
+        ScrollView {
+            VStack {
+                ForEach(0..<50) { index in
+                    GeometryReader { geometry in
+                        Text("Row \(index)")
+                            .background(
+                                Color.red.opacity(Double(geometry.frame(in: .global).minY) / 1000.0)
+                            )
+                    }
+                    .frame(height: 50)
+                }
             }
         }
-        .debugOverlay("", color: .red, alignment:.center, offset: 0)
-        .foregroundStyle(Color.white)
-        .background(Color.green1)
     }
 }
+
 
 #Preview {
     GeometryReaderBootcamp()
@@ -55,6 +56,6 @@ struct NoGeometryReaderBootcamp: View {
 }
 
 #Preview(body: {
-    NoGeometryReaderBootcamp()
-        .debugLayout(true)
+    GeometryReaderEffect()
 })
+

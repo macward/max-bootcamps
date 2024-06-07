@@ -105,6 +105,7 @@ struct PropertyWrapperTest: View {
     }
 }
 
-#Preview {
-    PropertyWrapperTest()
-}
+//#Preview {
+//    PropertyWrapperTest()
+//}
+

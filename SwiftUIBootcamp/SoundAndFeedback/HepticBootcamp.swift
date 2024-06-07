@@ -7,7 +7,7 @@
 import SwiftUI
 import UIKit
 
-struct SimpleHepticBootcamp: View {
+struct HepticBootcamp: View {
     var body: some View {
         VStack {
             Button("Impact Feedback") {
@@ -33,5 +33,5 @@ struct SimpleHepticBootcamp: View {
 
 
 #Preview {
-    SimpleHepticBootcamp()
+    HepticBootcamp()
 }

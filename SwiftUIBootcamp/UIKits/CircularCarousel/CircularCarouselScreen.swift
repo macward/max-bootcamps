@@ -42,6 +42,7 @@ struct CircularCarouselScreen: View {
                             .frame(width: 220, height: 150)
                             .visualEffect { content, geometryProxy in
                                 content
+                                    //.scaleEffect(geometryProxy.frame(in: .global).minY < 100 ? 0.1 : 1.0)
                                     .offset(x: -150)
                                     /*
                                      when we use the rotation modifier, the view simply spins at the same spot.
@@ -50,13 +51,15 @@ struct CircularCarouselScreen: View {
                                      concept, we can convert the vertica carousel into a circular one.
                                      */
                                     .rotationEffect(
-                                        .init(degrees: cardRotation(geometryProxy)),
+                                        .init(degrees: cardRotation(geometryProxy, card: card)),
                                         anchor: .trailing
                                     )
                                     .offset(x: 100, y: -geometryProxy.frame(in: .scrollView(axis: .vertical)).minY)
+                                    .scaleEffect(cardScale(geometryProxy, card: card))
                                     
                             }
                             .frame(maxWidth: .infinity, alignment: .trailing)
+                            
                     }
                 }
                 .scrollTargetLayout()
@@ -132,13 +135,33 @@ struct CircularCarouselScreen: View {
         }
     }
     
-    func cardRotation(_ proxy: GeometryProxy) -> CGFloat {
+    func cardScale(_ proxy: GeometryProxy, card: CreditCard) -> CGSize {
         let minY = proxy.frame(in: .scrollView(axis: .vertical)).minY
         let height = proxy.size.height
         let progress = minY / height
-        let angleForEachCard: CGFloat = -50
+        
+        // Cap the progress to be between -1 and 1
+        let cappedProgress = min(max(progress, -1), 1)
+        
+        // Calculate the scale factor, where the center item has a scale of 1.3
+        let scaleFactor = 0.6 + (0.6 * (1 - abs(cappedProgress)))
+        
+        if card.number == "7821" {
+            print(scaleFactor)
+        }
+        
+        return CGSize(width: scaleFactor, height: scaleFactor)
+    }
+    
+    func cardRotation(_ proxy: GeometryProxy, card: CreditCard) -> CGFloat {
+        let minY = proxy.frame(in: .scrollView(axis: .vertical)).minY
+        let height = proxy.size.height
+        let progress = minY / height
+        let angleForEachCard: CGFloat = -58
         let cappedProgress = progress < 0 ? min(max(progress, -3), 0) : max(min(progress, 3), 0)
-        return cappedProgress * angleForEachCard
+        let totalProgress = cappedProgress * angleForEachCard
+        
+        return totalProgress
         /*
          the result is not circular. this is because, when all the views are in one position,
          applying a rotation modifier will give us a circular patter view. Nevertheless, we

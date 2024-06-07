@@ -81,7 +81,7 @@ struct TabStateScrollView<Content: View>: View {
             }
             .scrollIndicators(showIndicator ? .visible : .hidden)
             .background {
-                CustomGesture {
+                GestureProxy {
                     handleState($0)
                 }
             }
@@ -90,7 +90,7 @@ struct TabStateScrollView<Content: View>: View {
                 content
             })
             .background {
-                CustomGesture {
+                GestureProxy {
                     handleState($0)
                 }
             }
@@ -119,20 +119,20 @@ struct TabStateScrollView<Content: View>: View {
     }
 }
 
-fileprivate struct CustomGesture: UIViewRepresentable {
+public struct GestureProxy: UIViewRepresentable {
     
     var onChange: (UIPanGestureRecognizer) -> ()
     private let gestureID = UUID().uuidString
     
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         return Coordinator(onChange: onChange)
     }
     
-    func makeUIView(context: Context) -> some UIView {
+    public func makeUIView(context: Context) -> some UIView {
         return UIView()
     }
     
-    func updateUIView(_ uiView: UIViewType, context: Context) {
+    public func updateUIView(_ uiView: UIViewType, context: Context) {
         DispatchQueue.main.async {
             if let superView = uiView.superview?.superview, !(superView.gestureRecognizers?.contains(where: { $0.name == gestureID }) ?? false) {
                 let gesture = UIPanGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.gestureChange(gestures:)))
@@ -143,7 +143,7 @@ fileprivate struct CustomGesture: UIViewRepresentable {
         }
     }
     
-    class Coordinator: NSObject, UIGestureRecognizerDelegate {
+    public class Coordinator: NSObject, UIGestureRecognizerDelegate {
         
         var onChange: (UIPanGestureRecognizer) -> ()
         
@@ -156,11 +156,10 @@ fileprivate struct CustomGesture: UIViewRepresentable {
             onChange(gestures)
         }
         
-        func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
             return true
         }
     }
-    
 }
 
 #Preview {

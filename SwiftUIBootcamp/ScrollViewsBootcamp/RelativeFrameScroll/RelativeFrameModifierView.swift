@@ -7,12 +7,8 @@
 
 import SwiftUI
 
-
-
-
 struct RelativeFrameScroll: View {
     @State private var count: Double = 2.0
-    
     var body: some View {
         if #available(iOS 17, *) {
             VStack {
@@ -29,18 +25,10 @@ struct RelativeFrameScroll: View {
                     .scrollTargetBehavior(.paging) // le decimos al scroll que se comporte como un paginador
                     .safeAreaPadding(16) // esto es impotante para centrar la vista
                 }
-                
-                
-            }
-            
+            }            
             Spacer()
         }
     }
-}
-
-
-#Preview {
-    RelativeFrameLayout()
 }
 
 #Preview {

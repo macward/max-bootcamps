@@ -12,37 +12,13 @@ struct EnvironmentTestView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
-    var MainView: some View {
-//        if colorScheme == .dark { // Checks the wrapped value.
-//            Text("Dark scheme")
-//        } else {
-//            Text("Light scheme")
-//                .onTapGesture {
-//                    dismiss()
-//                }
-//        }
-        Text("sample")
-            
-    }
-    
     var body: some View {
-        MainView
+        Text("Environment")
     }
 }
 
 #Preview {
     EnvironmentTestView()
-}
-
-struct ContentView: View {
-    var body: some View {
-      List {
-        Text("Hello World")
-                    .bold() // .bold() is a modifier
-                    .foregroundColor(.blue) // modifier: set foreground color
-                    .blur(radius: 1, opaque: false) // modifier: set blur
-        }
-    }
 }
 
 

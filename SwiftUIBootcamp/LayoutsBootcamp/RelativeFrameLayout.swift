@@ -32,7 +32,6 @@ struct RelativeFrameLayout: View {
                     withAnimation {
                         return lenght * multiplier
                     }
-                    
                 }
             Color.clear.ignoresSafeArea()
                 .overlay(alignment: .bottom) {
