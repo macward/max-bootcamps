@@ -12,12 +12,13 @@ struct ImageObject: Identifiable {
     var image: String
 }
 
-struct ColorObject: Hashable {
-    var color: Color
+struct ColorObject: Hashable, Identifiable {
+    let id: UUID = UUID()
+    let color: Color
 }
 
-struct ColorObjects {
-    static func list() -> [ColorObject] {
+extension ColorObject {
+    static var mock: [ColorObject] {
         return [
             ColorObject(color: .blue1),
             ColorObject(color: .blue2),
@@ -29,6 +30,20 @@ struct ColorObjects {
             ColorObject(color: .green3),
             ColorObject(color: .green4),
             ColorObject(color: .green5),
+            ColorObject(color: .pink),
+            ColorObject(color: .indigo),
+            ColorObject(color: .yellow),
+            ColorObject(color: .green),
+            ColorObject(color: .blue),
+            ColorObject(color: .cyan),
+            ColorObject(color: .orange),
+            ColorObject(color: .purple),
+            ColorObject(color: .mint),
+            ColorObject(color: .brown)
         ]
+    }
+    
+    static var colors: [Color] {
+        ColorObject.mock.map {$0.color}
     }
 }

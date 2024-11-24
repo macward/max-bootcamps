@@ -6,6 +6,19 @@
 //
 
 import SwiftUI
+/*
+
+ El modificador containerRelativeFrame en SwiftUI se utiliza para ajustar el tamaño de una vista en
+ relación con el contenedor en el que se encuentra. Aquí está lo que hace en el contexto del
+ código que proporcionaste:
+
+ - containerRelativeFrame(.vertical): Especifica que la vista debe ajustar su tamaño verticalmente (en la dimensión vertical) en relación con el contenedor.
+
+ - { length, axis in ... }: Esta es una clausura que recibe dos parámetros: length, que representa la longitud del contenedor en la dirección especificada (en este caso, vertical), y axis, que es el eje (vertical u horizontal).
+ 
+ - Dentro de la clausura, se define cómo se ajustará la longitud de la vista en relación con el contenedor. En tu código, se usa length * multiplier para ajustar dinámicamente el tamaño del rectángulo en función de un valor de multiplier.
+ 
+ */
 
 struct RelativeFrameLayout: View {
     
@@ -23,19 +36,22 @@ struct RelativeFrameLayout: View {
     @State private var containerAlignment: Alignment = .top
     
     var body: some View {
-        
         ZStack(alignment: containerAlignment){
             Rectangle()
-                .fill(Color.tertiaryBg)
-                .ignoresSafeArea()
-                .containerRelativeFrame(.vertical) { lenght, axis in
+                .fill(Color.tertiaryBg) // Rellena el rectángulo con el color terciario de fondo
+                .ignoresSafeArea() // Ignora las áreas seguras de la pantalla para llenar toda el área
+                .containerRelativeFrame(.vertical) { length, axis in
                     withAnimation {
-                        return lenght * multiplier
+                        // Calcula la longitud relativa del contenedor multiplicándola por el valor de 'multiplier'
+                        // y aplica una animación para suavizar el cambio
+                        return length * multiplier
                     }
                 }
+
+            
+            // panel de control
             Color.clear.ignoresSafeArea()
                 .overlay(alignment: .bottom) {
-                    
                     VStack(alignment: .leading){
                         VStack(alignment: .leading){
                             Text("Alignment")
@@ -44,11 +60,17 @@ struct RelativeFrameLayout: View {
                                     ComboButton(button: button, selected: $selectedButton) { value in
                                         switch value {
                                         case "top":
-                                            containerAlignment = .top
+                                            withAnimation {
+                                                containerAlignment = .top
+                                            }
                                         case "center":
-                                            containerAlignment = .center
+                                            withAnimation {
+                                                containerAlignment = .center
+                                            }
                                         case "bottom":
-                                            containerAlignment = .bottom
+                                            withAnimation {
+                                                containerAlignment = .bottom
+                                            }
                                         default: break
                                         }
                                     }
@@ -58,6 +80,7 @@ struct RelativeFrameLayout: View {
                         VStack(alignment: .leading){
                             Text("Container Height")
                             Slider(value: $multiplier, in: 0.0...1.0)
+                                .animation(.easeInOut, value: multiplier)
                         }
                     }
                     .padding()

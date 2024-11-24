@@ -16,10 +16,7 @@ struct MatchedGeometrySimpleView: View {
     }
     
     var body: some View {
-        
-        BaseViewBackground {
-            Color.gray.opacity(0.3)
-        } content: {
+        BaseViewBackground(background: Color.gray.opacity(0.3)) {
             VStack {
                 Circle()
                     .fill(.red)

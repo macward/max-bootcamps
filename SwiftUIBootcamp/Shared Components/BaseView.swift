@@ -8,25 +8,39 @@
 import SwiftUI
 
 struct BaseViewBackground<Background: View, Content: View>: View {
-    
-    @ViewBuilder var background: Background
-    @ViewBuilder var content: Content
-    
+
+    var background: Background
+    var content: Content
+
+    init(background: Background,
+         @ViewBuilder content: () -> Content)
+    {
+        self.background = background
+        self.content = content()
+    }
     var body: some View {
-        ZStack(content: {
+        ZStack {
             background.ignoresSafeArea()
             content
-        })
+        }
     }
 }
 
 struct BaseView<Content: View>: View {
-    
-    @ViewBuilder var content: Content
+    var content: Content
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
     
     var body: some View {
         ZStack {
-            Color.background.ignoresSafeArea()
+            GeometryReader(content: { geometry in
+                Image("blueprint1")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, alignment: .center)
+                    .ignoresSafeArea()
+            })
             content
         }
     }
@@ -34,7 +48,12 @@ struct BaseView<Content: View>: View {
 
 struct BaseViewTest: View {
     var body: some View {
-        OnlyiOS17View()
+        BaseView {
+            VStack {
+                Text("hi")
+                Text("hello")
+            }
+        }
     }
 }
 

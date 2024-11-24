@@ -21,24 +21,23 @@ enum ApiError: Error {
     case unknown
 }
 
-
-struct BaseViewWithState<LoadedContent: View, 
-                            LoadingContent: View,
-                            InitialContent: View,
-                            ErrorContent: View>: View {
+struct BaseViewWithState<LoadedContent: View,
+                         LoadingContent: View,
+                         ErrorContent: View,
+                         InitialContent: View>: View {
     
     private var state: ViewDataState
-    @ViewBuilder var initialContent: () -> InitialContent
-    @ViewBuilder var loadedContent: () -> LoadedContent
-    @ViewBuilder var loadingContent: () -> LoadingContent
-    @ViewBuilder var errorContent: (ApiError) -> ErrorContent
+    var loadedContent: () -> LoadedContent
+    var initialContent: (() -> InitialContent)?
+    var loadingContent: (() -> LoadingContent)?
+    var errorContent: (Error) -> ErrorContent
     
     init(
         state: ViewDataState,
-        initialContent: @escaping () -> InitialContent,
         loadedContent: @escaping () -> LoadedContent,
-        loadingContent: @escaping () -> LoadingContent,
-        errorContent: @escaping (ApiError) -> ErrorContent)
+        errorContent: @escaping (Error) -> ErrorContent,
+        initialContent: (() -> InitialContent)? = nil,
+        loadingContent: (() -> LoadingContent)? = nil)
     {
         self.state = state
         self.initialContent = initialContent
@@ -47,43 +46,37 @@ struct BaseViewWithState<LoadedContent: View,
         self.errorContent = errorContent
     }
     
+    @ViewBuilder
     var body: some View {
         ZStack {
             Color.primaryBg.ignoresSafeArea()
             switch state {
             case .initialLoading:
-                initialContent()
+                if let initialContent = initialContent {
+                    initialContent()
+                } else {
+                    EmptyView()
+                }
             case .loaded:
                 loadedContent()
             case .loading:
-                loadingContent()
+                if let loadingContent = loadingContent {
+                    loadingContent()
+                } else {
+                     EmptyView()
+                }
             case .error(let error):
                 errorContent(error)
             }
         }
     }
-    
 }
 
+
 struct ContainerWithDataState: View {
-    @State var state: ViewDataState = .initialLoading
+    @State var state: ViewDataState = .loading
     var body: some View {
-        BaseViewWithState(state: state) {
-            EmptyView()
-        } loadedContent: {
-            EmptyView()
-        } loadingContent: {
-            EmptyView()
-        } errorContent: { error in
-            switch error {
-            case .networkError:
-                EmptyView()
-            case .parsingError:
-                EmptyView()
-            case .unknown:
-                EmptyView()
-            }
-        }
+        Text("")
     }
 }
 

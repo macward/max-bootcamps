@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SocialMediaCardView: View {
     var body: some View {
-        VStack {
-            HStack {
+        VStack(spacing: 16) {
+            HStack(spacing: 16) {
                 Image("avatar")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -18,30 +18,33 @@ struct SocialMediaCardView: View {
                     .clipShape(Circle())
                 VStack (alignment: .leading) {
                     Text("Max Ward")
-                        .font(.system(size: 16)).fontWeight(.medium)
+                        .font(.headline)
                     Text("@maxward")
-                        .font(.system(size: 14)).fontWeight(.medium)
+                        .font(.footnote)
                 }
-                Spacer()
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .overlay(alignment: .topTrailing) {
                 Image("twitter-icon")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 24)
+                    .frame(width: 32)
             }
             Text("Lorem ipsum dolor sit amet illiet es ail consectetur adipiscing elit. Ultrices et pulvinar id convallis quis luctus forza http://ows.lly/95IZ50z3bQP")
-                .padding(.top, 8)
+                .font(.subheadline)
         }
         .padding()
         .overlay(content: {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 8)
                 .stroke(Color("SocialBg").gradient, lineWidth: 1)
         })
         .foregroundStyle(Color("SocialText"))
         .background(Color("SocialBg"))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 
 #Preview {
     SocialMediaCardView()
+        .padding(.horizontal)
 }

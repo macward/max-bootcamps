@@ -43,16 +43,16 @@ struct InfiniteAnimation: View {
                             .rotationEffect(.degrees(isRotating))
                             .animation(foreverAnimationBG, value: isRotating)
                             .opacity(0.2)
-                            
+                        
                     })
                 }
                 Spacer()
             }
             .onAppear {
                 withAnimation(.linear(duration: 1).speed(0.4)
-                        .repeatForever(autoreverses: false)) {
-                    isRotating = 360.0
-                }
+                    .repeatForever(autoreverses: false)) {
+                        isRotating = 360.0
+                    }
             }
         }
     }
@@ -63,7 +63,7 @@ struct InfiniteAnimation: View {
             Ellipse()
                 .stroke(!active ? .white : .red, lineWidth: 3)
                 .frame(width: width, height: height)
-
+            
             Ellipse()
                 .stroke(.white.opacity(0.03), lineWidth: 10)
                 .frame(width: width, height: height)

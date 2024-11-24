@@ -13,6 +13,7 @@ enum Category: String, Identifiable, CaseIterable {
     case navigation
     case animations
     case scrollview
+    case grids
     case sliders
     case lists
     case GeometryReader
@@ -32,6 +33,8 @@ enum Category: String, Identifiable, CaseIterable {
             return "Layouts bootcamp"
         case .others:
             return "Otros"
+        case .grids:
+            return "Grid Bootcamp"
         case .scrollview:
             return "ScrollViews Bootcamp"
         case .sliders:
@@ -59,7 +62,9 @@ enum Category: String, Identifiable, CaseIterable {
         case .animations:
             return [.AIScreen, 
                 .AIScreenV2,
-                .HideTabOnScroll]
+                .HideTabOnScroll,
+                .KeyframeAnimation, 
+                .AnimatedButton]
         case .layouts:
             return [.RelativeFrame,
                 .RelativeSizeLayout,
@@ -73,9 +78,11 @@ enum Category: String, Identifiable, CaseIterable {
                 .ScrollTransition1,
                 .RelativeScroll]
         case .Components:
-            return [.ButtonView]
+            return [.ButtonView, .AnimatedButton]
         case .others:
-            return [.CardTransition, .Heptic]
+            return [.CardTransition, .Heptic, .MovableGrid]
+        case .grids:
+            return [.MovableGrid]
         case .UIs:
             return [.CardCarousel, 
                 .CardTransition,
@@ -89,7 +96,8 @@ enum Category: String, Identifiable, CaseIterable {
         case .soundAndFeedback:
             return [.Heptic]
         case .navigation: return []
-        case .Gestures: return []
+        case .Gestures: return [
+            .MovableGrid]
         }
     }
 }
@@ -115,6 +123,9 @@ enum ViewDestination: String, Identifiable, CaseIterable {
     case hideSearchbar
     case ScrollTransition1
     case RelativeScroll
+    case MovableGrid
+    case AnimatedButton
+    case KeyframeAnimation
     
     var id: String { self.rawValue }
     
@@ -160,6 +171,12 @@ enum ViewDestination: String, Identifiable, CaseIterable {
             ScrollTransitionExample1()
         case .RelativeScroll:
             RelativeFrameScroll()
+        case .MovableGrid:
+            MovableGridBootcamp()
+        case .AnimatedButton:
+            AnimatedButtonsBootcamp()
+        case .KeyframeAnimation:
+            KeyframeAnimationBootcamp()
         }
     }
     
@@ -203,6 +220,12 @@ enum ViewDestination: String, Identifiable, CaseIterable {
             return "Scroll transition example 1"
         case .RelativeScroll:
             return "Relative scroll views"
+        case .MovableGrid:
+            return "Movable grid view"
+        case .AnimatedButton:
+            return "Animated button"
+        case .KeyframeAnimation:
+            return "Keyframe Animations"
         }
     }
     

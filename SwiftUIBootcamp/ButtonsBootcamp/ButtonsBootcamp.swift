@@ -32,7 +32,7 @@ public struct ButtonFilled: View {
                 .background(.darkBlue100)
                 .cornerRadius(.small)
         }
-        .buttonStyle(.plain)
+        
     }
 }
 
@@ -255,51 +255,54 @@ public struct ButtonModern: View {
 
 struct ButtonsBootcamp: View {
     var body: some View {
-        ScrollView {
-            VStack {
-                HStack {
-                    ButtonCircleIcon(icon: "house.fill", action: {})
-                    Text("Circle button")
-                }
-                HStack {
-                    ButtonWithIcon(icon: "house.fill", {})
-                    Text("Button with icon")
-                }
-                HStack {
-                    ButtonToggleIcon(icon: "house.fill") { status in
-                        print(status)
+        
+        BaseView {
+            ScrollView {
+                VStack {
+                    HStack {
+                        ButtonCircleIcon(icon: "house.fill", action: {})
+                        Text("Circle button")
+                    }
+                    HStack {
+                        ButtonWithIcon(icon: "house.fill", {})
+                        Text("Button with icon")
+                    }
+                    HStack {
+                        ButtonToggleIcon(icon: "house.fill") { status in
+                            print(status)
+                        }
+                        
+                        ButtonToggleIcon(icon: "house.fill", action: { status in
+                            print("status")
+                        }, isActive: true)
+                        Text("Toggle button")
+                    }
+                    HStack {
+                        ButtonCaptionWithIcon(icon: "house.fill", caption: "caption sample", action: {})
+                        Text("Button caption with icon")
+                    }
+                    HStack {
+                        ButtonFilled(label: "Filled button", {})
+                        Text("Filled button")
                     }
                     
-                    ButtonToggleIcon(icon: "house.fill", action: { status in
-                        print("status")
-                    }, isActive: true)
-                    Text("Toggle button")
-                }
-                HStack {
-                    ButtonCaptionWithIcon(icon: "house.fill", caption: "caption sample", action: {})
-                    Text("Button caption with icon")
-                }
-                HStack {
-                    ButtonFilled(label: "Filled button", {})
-                    Text("Filled button")
-                }
-                
-                HStack {
-                    ButtonBordered(label: "Hello", {})
-                    Text("Bordered button")
-                }
-                HStack {
-                    ButtonTextWithImage(label: "Text with image", icon: "house.fill", action: {})
-                    Spacer()
-                    Text("Button text and image")
-                }
-                HStack {
-                    ButtonModern(label: "Modren button", icon: "house.fill", action: {})
-                    Text("Modren button")
+                    HStack {
+                        ButtonBordered(label: "Hello", {})
+                        Text("Bordered button")
+                    }
+                    HStack {
+                        ButtonTextWithImage(label: "Text with image", icon: "house.fill", action: {})
+                        Spacer()
+                        Text("Button text and image")
+                    }
+                    HStack {
+                        ButtonModern(label: "Modren button", icon: "house.fill", action: {})
+                        Text("Modren button")
+                    }
                 }
             }
+            .padding()
         }
-        .padding()
     }
 }
 

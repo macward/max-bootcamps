@@ -11,12 +11,13 @@ struct PaddingBootcamp: View {
     var body: some View {
         ZStack(alignment: .top) {
             Color.green3.ignoresSafeArea()
-            ScrollView(.vertical, showsIndicators: true) {
+            ScrollView(.vertical, showsIndicators: false) {
                 ForEach(0...50, id: \.self) { _ in
                     SocialMediaCardView()
                 }
             }
             .navigationTitle("Feed")
+            .contentMargins(.horizontal, 16)
         }
         .safeAreaPadding(.vertical, 44)
         // como se agrego este safeAreaPadding al zstack, toda la pantalla tiene
@@ -26,5 +27,7 @@ struct PaddingBootcamp: View {
 }
 
 #Preview {
-    PaddingBootcamp()
+    NavigationStack {
+        PaddingBootcamp()
+    }
 }

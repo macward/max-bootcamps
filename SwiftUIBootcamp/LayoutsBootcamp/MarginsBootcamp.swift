@@ -16,9 +16,10 @@ struct MarginsBootcamp: View {
                 Text("Elemento 1")
                 Text("Elemento 2")
             }
-            .contentMargins(20)
+            .contentMargins(16)
             .background(Color.green5)
             .debugViewLimit(.yellow)
+            
         }
 
     }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ScrollTestView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
-    private var colors: [ColorObject] = ColorObjects.list()
+    private var colors: [ColorObject] = ColorObject.mock
+    
     var body: some View {
         BaseView {
             if #available(iOS 17, *) {
